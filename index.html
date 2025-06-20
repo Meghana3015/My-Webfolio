@@ -46,6 +46,7 @@
         </div>
         <div class="bento-item" style="width: 748px;">
           <div class="intro-text">
+            <span class="light">Hello!</span><br>
             <span class="light">I'm</span> <span class="dark">Meghana Timmampalli</span><br>
             <span class="light">a</span> <span class="typed-text"></span><span class="typed-cursor">|</span>
           </div>
@@ -71,66 +72,115 @@
     </section>
     <section class="section about" id="about">
       <div class="about-heading">About Me</div>
+      
+      <!-- Education OUTSIDE the bento grid -->
+      <div class="about-education">
+        <div class="timelines">
+          <section class="timeline education">
+            <h2 class="timeline-title" id="education">My Education</h2>
+            <ul class="timeline-items">
+              <li class="timeline-item">
+                <h3>Bachelor of Technology in Computer Science & Engineering</h3>
+                <p class="date-interval">
+                  <time datetime="2017-09">2022</time> &ndash; <time datetime="2019-07">2026</time>
+                </p>
+                <p class="location">Madanapalle Institute of Technology & Science, Madanapalle, A.P., India</p>
+              </li>
+              <li class="timeline-item">
+                <h3>Intermediate (MPC)</h3>
+                <p class="date-interval">
+                  <time datetime="2011-09">2020</time> &ndash; <time datetime="2017-07">2022</time>
+                </p>
+                <p class="location">Krishna Reddy Siddhartha Jr. College, Madanapalle, A.P., India</p>
+              </li>
+              <li class="timeline-item">
+                <h3>Matriculation</h3>
+                <p class="date-interval">
+                  <time datetime="2010-06">2020</time>
+                </p>
+                <p class="location">Sri Chaitanya Children's Academy, Madanapalle, A.P., India</p>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <!-- Bento grid with only the other three items -->
       <div class="bento-grid2 about-bento">
-        <div class="bento-item about-education">
-          <!-- <h2>Education</h2> -->
-          <div class="timelines">
-            <section class="timeline education">
-              <h2 class="timeline-title" id="education">Education</h2>
-              <ul class="timeline-items">
-                <li class="timeline-item">
-                  <h3>Bachelor of Technology in Computer Science & Engineering</h3>
-                  <p class="date-interval">
-                    <time datetime="2017-09">2022</time> &ndash; <time datetime="2019-07">2026</time>
-                  </p>
-                  <p class="location">Madanapalle Institute of Technology & Science, Madanapalle, A.P., India</p>
-                </li>
-                <li class="timeline-item">
-                  <h3>Intermediate (MPC)</h3>
-                  <p class="date-interval">
-                    <time datetime="2011-09">2020</time> &ndash; <time datetime="2017-07">2022</time>
-                  </p>
-                  <p class="location">Krishna Reddy Siddhartha Jr. College, Madanapalle, A.P., India</p>
-                </li>
-                <li class="timeline-item">
-                  <h3>Matriculation</h3>
-                  <p class="date-interval">
-                    <time datetime="2010-06">2020</time>
-                  </p>
-                  <p class="location">Sri Chaitanya Children's Academy, Madanapalle, A.P., India</p>
-                </li>
-              </ul>
-            </section>
-          </div>
-        </div>
-        <!-- <div class="bento-item about-whatido">
-          <h2>What I Do</h2>
-          <ul>
-            <li>UI/UX Design</li>
-            <li>Frontend Development</li>
-            <li>Branding & Marketing</li>
-            <li>Mentoring</li>
+        <div class="bento1-item about-whatido">
+          <h2 class="timeline-title">What I Do</h2>
+          <ul class="whatido-list">
+            <li><span class="whatido-service">Web Design</span></li>
+            <li><span class="whatido-service">App Design</span></li>
+            <li><span class="whatido-service">Front-End Development</span></li>
+            <li><span class="whatido-service">Responsive Design</span></li>
+            <li><span class="whatido-service">Design Systems</span></li>
+            <li><span class="whatido-service">Visual Branding</span></li>
           </ul>
         </div>
-        <div class="bento-item about-skills">
+        <div class="bento1-item about-skills">
           <h2>My Skills</h2>
-          <ul>
-            <li>Figma, Adobe XD, Photoshop</li>
-            <li>HTML, CSS, JavaScript, React</li>
-            <li>Brand Strategy</li>
-            <li>Wireframing & Prototyping</li>
+          <ul class="skills-list">
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="skill-icon"> Figma</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" alt="Adobe XD" class="skill-icon"> Adobe XD</li>
+            <li><img src="https://cdn.simpleicons.org/canva" alt="Canva" class="skill-icon"> Canva</li>
+            <li><img src="https://cdn.simpleicons.org/miro" alt="Miro" class="skill-icon"> Miro</li>
+            <!-- <li><i class="fab fa-html5 skill-icon" style="color:#e44d26"></i> HTML5</li> -->
+            <li><img src="https://cdn.simpleicons.org/html5" alt="Canva" class="skill-icon"> HTML5</li>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="Canva" class="skill-icon"> CSS3</li>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Canva" class="skill-icon"> JavaScript</li>
+            <!-- <li><i class="fab fa-css3-alt skill-icon" style="color:#1572b6"></i> CSS3</li>
+            <li><i class="fab fa-js-square skill-icon" style="color:#f7df1e"></i> JavaScript</li> -->
+            <li><img src="https://cdn.simpleicons.org/bootstrap" alt="Canva" class="skill-icon"> Bootstrap</li>
+            <!-- <li><i class="fab fa-bootstrap skill-icon" style="color:#563d7c"></i> Bootstrap</li>  -->
+            <li><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" class="skill-icon"> Tailwind CSS</li>
+            <li><img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="Canva" class="skill-icon"> VS Code</li>
+            <!-- <li><i class="fas fa-code skill-icon" style="color:#0078d4"></i> VS Code</li> -->
+            <!-- <li><i class="fab fa-github skill-icon" style="color:#333"></i> GitHub</li> -->
+             <li><img src="https://cdn.simpleicons.org/github" alt="Canva" class="skill-icon"> GitHub</li>
+            <li><img src="https://cdn.simpleicons.org/netlify" alt="Netlify" class="skill-icon"> Netlify</li>
           </ul>
         </div>
-        <div class="bento-item about-process">
+        <div class="bento1-item about-process">
           <h2>Design Process</h2>
-          <ol>
-            <li>Research & Discovery</li>
-            <li>Wireframing</li>
-            <li>Prototyping</li>
-            <li>User Testing</li>
-            <li>Final Design & Handoff</li>
-          </ol>
-        </div> -->
+          <ul class="process">
+            <li class="process__item">
+              <span class="process__number">1</span>
+              <span class="process__title">Understand</span>
+              <span class="process__subtitle">Gather requirements & define user, business goals.</span>
+            </li>
+            <li class="process__item">
+              <span class="process__number">2</span>
+              <span class="process__title">Research</span>
+              <span class="process__subtitle">Analyze users, competitors & existing solutions.</span>
+            </li>
+            <li class="process__item">
+              <span class="process__number">3</span>
+              <span class="process__title">Define &amp; Ideate</span>
+              <span class="process__subtitle">Create personas, user flows & generate design ideas.</span>
+            </li>
+            <li class="process__item">
+              <span class="process__number">4</span>
+              <span class="process__title">Wireframe</span>
+              <span class="process__subtitle">Draft low-fidelity layouts & structure content.</span>
+            </li>
+            <li class="process__item">
+              <span class="process__number">5</span>
+              <span class="process__title">Design</span>
+              <span class="process__subtitle">Build high-fidelity UI & interactive prototypes.</span>
+            </li>
+            <li class="process__item">
+              <span class="process__number">6</span>
+              <span class="process__title">Test &amp; Iterate</span>
+              <span class="process__subtitle">Validate with users & refine based on feedback.</span>
+            </li>
+            <li class="process__item">
+              <span class="process__number">7</span>
+              <span class="process__title">Handoff</span>
+              <span class="process__subtitle">Share assets & collaborate with developers.</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <!-- <section class="section projects" id="projects">Projects</section>

@@ -20,48 +20,86 @@
   font-weight: 900;
   letter-spacing: 0.1em;
   color: var(--asset-color2);
-  margin-right: 2rem;
+  margin-right: 0rem;
   margin-bottom: 210px;
   display: inline-block;
 }
 
+.about-education{
+  background-color: white;
+  color: #102e76;
+  height: 564px;
+}
+
 /* About Bento Grid */
 .about-bento {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto;
   gap: 1.2rem;
   width: 100%;
-  min-width: 1300px;
+  min-width: 1360px;
   margin: 0 auto;
   padding: 2.4rem 0;
 }
 
-.about-bento .bento-item {
-  background: #f5f5f5;
+.about-whatido {
+  grid-column: 1 / span 2; /* occupies columns 1,2,3 */
+  grid-row: 1 / 2;
+  background-color: var(--secondary-color);
+  padding: 10px 40px;
+}
+
+.about-skills {
+  grid-column: 3 / span 3; /* occupies columns 4,5 */
+  grid-row: 1 / 2;
+  background-color: var(--secondary-color);
+  padding: 10px 40px;
+}
+
+.about-process {
+  grid-column: 1 / span 5; /* occupies all 5 columns */
+  grid-row: 2 / 3;
+  background-color: white;
+  padding: 10px 40px;
+  height: 260px;
+}
+h2{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--asset-color2);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-bento .bento1-item {
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 220px;
+  height: 273px;
 }
 
-.about-bento .bento-item h2 {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   color: var(--asset-color2);
   font-weight: 700;
 }
 
-.about-bento .bento-item ul,
-.about-bento .bento-item ol {
-  margin: 0;
+.about-bento .bento1-item ul,
+.about-bento .bento1-item ol {
+  /* margin: 0; */
   color: #222;
   font-size: 1rem;
 }
 
 .about-education {
-  min-width: 500px;
-  padding: 20px 50px;
+  min-width: 460px;
+  margin: 40px 20px;
+  border-radius: 1rem;
+  padding: 10px 40px;
 }
 
 /* Timeline Styles */
@@ -74,24 +112,25 @@
 
 .timeline-title {
   font-size: 1.5em;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-transform: uppercase;
 }
 
 .timeline-items {
   list-style-type: none;
-  margin-left: 2em;
-  padding: 0.01em 0 3em 2em;
+  margin-left: 0.5em;
+  margin-top: 30px;
+  padding: 1em 0em 0em 2em;
   border-left: 1px solid #568aa3;
 }
 
 .timeline-item {
-  margin-bottom: 2em;
+  margin-bottom: 2.5em;
   margin-top: -.3em;
 }
 
 .timeline-item h3 {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: bold;
   margin: 0;
   position: relative;
@@ -100,7 +139,7 @@
 .timeline-item h3::before {
   content: "";
   position: absolute;
-  left: -2.35em;
+  left: -2.15em;
   background-color: #568aa3;
   box-shadow: inset -1000px -1000px #568aa3;
   width: 0.7em;
@@ -114,8 +153,10 @@
 }
 
 .timeline-item .location {
-  font-size: 0.85em;
+  font-size: 0.88em;
   font-style: italic;
+  font-weight: 0;
+  color: #676767;
 }
 
 .timeline-item .date-interval {
@@ -123,16 +164,169 @@
   color: #888;
 }
 
-/* Print Button */
-#print-page {
-  font-size: .85em;
-  color: black;
-  background: rgba(255,255,255,0.8);
-  border: 1px solid #ccc;
-  padding: .25em 1em;
-  border-radius: .3em;
-  margin-top: 1em;
-  cursor: pointer;
+/* Process Styles */
+.process {
+  width: 100%;
+  padding: 0 5px;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  gap: 0rem;
+}
+
+.process__item {
+  max-width: 240px;
+  user-select: none;
+  text-align: center;
+  position: relative;
+  padding: 10px 10px;
+  transition: 0.4s ease-in-out;
+  background: transparent;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.process__number {
+  font-size: 2.2rem;
+  -webkit-text-stroke: 1px var(--asset-color2, #003c71);
+  display: block;
+  color: transparent;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-weight: 700;
+  transition: 0.4s ease-in-out;
+}
+
+.process__title {
+  display: block;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.15rem;
+  color: var(--asset-color2, #003c71);
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.process__subtitle {
+  display: block;
+  /* font-family: "Josefin Slab", serif; */
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* Remove list marker for only about-process steps */
+.about-process .process {
+  list-style: none;
+  padding: 0px;
+  height: 170px;
+}
+
+.about-process .process__item {
+  position: relative;
+}
+
+.about-process .process__item::marker,
+.about-process .process__item li::marker {
+  display: none;
+  content: none;
+}
+
+.about-process .process__item:hover .process__number {
+  color: var(--asset-color2, #003c71);
+  background: none;
+  -webkit-text-stroke: 0;
+  transition: color 0.6s;
+}
+.process__item:hover {
+  background: #eaf5ff;
+  transition: color 0.6s;
+}
+
+/* Add to sections.css */
+/* Arrow-like bullets for What I Do points */
+.whatido-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  max-width: 700px;
+}
+
+.whatido-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 2.2em;
+}
+
+.whatido-list li::before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  color: var(--asset-color2, #102e76);
+  font-size: 1rem;
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.whatido-service {
+  color: #676767;
+  font-size: 1.15rem;
+  font-family: Jost, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 25.42px;
+  word-wrap: break-word;
+  flex: 1;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.7rem 1.5rem;
+}
+
+.skills-list li {
+  display: flex;
+  padding: 10px 0px;
+  align-items: center;
+  font-size: 1.15rem;
+  font-family: Jost, Arial, sans-serif;
+  color: #676767;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.skill-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 0.7em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Add this to your sections.css */
+.whatido-arrow {
+  color: #333333;
+  font-size: 1.4rem;
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  margin-left: 0.7rem;
+  letter-spacing: -2px;
+  display: inline-block;
 }
 
 /* Responsive */
@@ -140,5 +334,16 @@
   .timeline-items {
     margin-left: 1em;
     padding-left: 1em;
+  }
+}
+
+@media (max-width: 900px) {
+  .process {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .process__item {
+    width: 100%;
+    margin-bottom: 0.5rem;
   }
 }
