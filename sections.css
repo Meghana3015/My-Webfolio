@@ -10,6 +10,8 @@
 .about {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 /* About Heading Vertical */
@@ -21,14 +23,7 @@
   letter-spacing: 0.1em;
   color: var(--asset-color2);
   margin-right: 0rem;
-  margin-bottom: 210px;
   display: inline-block;
-}
-
-.about-education{
-  background-color: white;
-  color: #102e76;
-  height: 564px;
 }
 
 /* About Bento Grid */
@@ -44,21 +39,21 @@
 }
 
 .about-whatido {
-  grid-column: 1 / span 2; /* occupies columns 1,2,3 */
+  grid-column: 1 / span 2;
   grid-row: 1 / 2;
   background-color: var(--secondary-color);
   padding: 10px 40px;
 }
 
 .about-skills {
-  grid-column: 3 / span 3; /* occupies columns 4,5 */
+  grid-column: 3 / span 3;
   grid-row: 1 / 2;
   background-color: var(--secondary-color);
   padding: 10px 40px;
 }
 
 .about-process {
-  grid-column: 1 / span 5; /* occupies all 5 columns */
+  grid-column: 1 / span 5;
   grid-row: 2 / 3;
   background-color: white;
   padding: 10px 40px;
@@ -81,21 +76,16 @@ h2{
   height: 273px;
 }
 
-h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: var(--asset-color2);
-  font-weight: 700;
-}
-
 .about-bento .bento1-item ul,
 .about-bento .bento1-item ol {
-  /* margin: 0; */
   color: #222;
   font-size: 1rem;
 }
 
 .about-education {
+  background-color: white;
+  color: #102e76;
+  height: 564px;
   min-width: 460px;
   margin: 40px 20px;
   border-radius: 1rem;
@@ -112,7 +102,6 @@ h2 {
 
 .timeline-title {
   font-size: 1.5em;
-  /* font-weight: bold; */
   text-transform: uppercase;
 }
 
@@ -172,7 +161,6 @@ h2 {
   margin: 0;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   gap: 0rem;
 }
 
@@ -211,7 +199,6 @@ h2 {
 
 .process__subtitle {
   display: block;
-  /* font-family: "Josefin Slab", serif; */
   font-size: 0.9rem;
   color: #555;
   margin-top: 10px;
@@ -246,7 +233,6 @@ h2 {
   transition: color 0.6s;
 }
 
-/* Add to sections.css */
 /* Arrow-like bullets for What I Do points */
 .whatido-list {
   display: grid;
@@ -317,7 +303,6 @@ h2 {
   vertical-align: middle;
 }
 
-/* Add this to your sections.css */
 .whatido-arrow {
   color: #333333;
   font-size: 1.4rem;
