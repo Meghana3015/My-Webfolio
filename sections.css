@@ -1,0 +1,144 @@
+/* Root Variables */
+:root {
+  --primary-color: #D6E4F0;
+  --secondary-color: #ffedea;
+  --asset-color: #085bc198;
+  --asset-color2: #102e76;
+}
+
+/* About Section Layout */
+.about {
+  display: flex;
+  flex-direction: row;
+}
+
+/* About Heading Vertical */
+.about-heading {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: var(--asset-color2);
+  margin-right: 2rem;
+  margin-bottom: 210px;
+  display: inline-block;
+}
+
+/* About Bento Grid */
+.about-bento {
+  display: flex;
+  gap: 1.2rem;
+  width: 100%;
+  min-width: 1300px;
+  margin: 0 auto;
+  padding: 2.4rem 0;
+}
+
+.about-bento .bento-item {
+  background: #f5f5f5;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 220px;
+}
+
+.about-bento .bento-item h2 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: var(--asset-color2);
+  font-weight: 700;
+}
+
+.about-bento .bento-item ul,
+.about-bento .bento-item ol {
+  margin: 0;
+  color: #222;
+  font-size: 1rem;
+}
+
+.about-education {
+  min-width: 500px;
+  padding: 20px 50px;
+}
+
+/* Timeline Styles */
+.timelines {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.timeline-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.timeline-items {
+  list-style-type: none;
+  margin-left: 2em;
+  padding: 0.01em 0 3em 2em;
+  border-left: 1px solid #568aa3;
+}
+
+.timeline-item {
+  margin-bottom: 2em;
+  margin-top: -.3em;
+}
+
+.timeline-item h3 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+}
+
+.timeline-item h3::before {
+  content: "";
+  position: absolute;
+  left: -2.35em;
+  background-color: #568aa3;
+  box-shadow: inset -1000px -1000px #568aa3;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+  transform: translate(-0.5px, .2em);
+}
+
+.timeline-item > * {
+  margin: 1em 0;
+}
+
+.timeline-item .location {
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+.timeline-item .date-interval {
+  font-size: 0.95em;
+  color: #888;
+}
+
+/* Print Button */
+#print-page {
+  font-size: .85em;
+  color: black;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid #ccc;
+  padding: .25em 1em;
+  border-radius: .3em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+  .timeline-items {
+    margin-left: 1em;
+    padding-left: 1em;
+  }
+}
