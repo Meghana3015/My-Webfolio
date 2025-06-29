@@ -12,11 +12,11 @@
 <body>
   <div class="sidebar">
     <div class="logo">
-      <img src="MT.png" alt="Logo" />
+      <img src="/images/MT.png" alt="Logo" />
     </div>
     <nav>
       <ul>
-        <li><a href="#hero" title="Hero"><i class="fas fa-home"></i></a></li>
+        <li><a href="" title="Hero"><i class="fas fa-home"></i></a></li>
         <li><a href="#about" title="About"><i class="fas fa-user"></i></a></li>
         <li><a href="#projects" title="Projects"><i class="fas fa-briefcase"></i></a></li>
         <li><a href="#contact" title="Contact"><i class="fas fa-envelope"></i></a></li>
@@ -26,7 +26,7 @@
 
   <div class="navbar">
     <div class="logo">
-      <img src="/MT.png" alt="Logo" />
+      <img src="/images/MT.png" alt="Logo" />
     </div>
     <nav>
       <ul>
@@ -42,7 +42,7 @@
     <section class="section hero" id="hero">
       <div class="bento-grid">
         <div class="bento-item">
-          <img src="Meghana.jpg" alt="Profile Photo" class="bento-photo" />
+          <img src="/images/Meghana.jpg" alt="Profile Photo" class="bento-photo" />
         </div>
         <div class="bento-item" style="width: 748px;">
           <div class="intro-text">
@@ -70,9 +70,8 @@
 
       </div>
     </section>
-    <section class="section about" id="about">
+    <section class="section about panel" id="about">
       <div class="about-heading">About Me</div>
-      
       <!-- Education OUTSIDE the bento grid -->
       <div class="about-education">
         <div class="timelines">
@@ -104,7 +103,6 @@
           </section>
         </div>
       </div>
-
       <!-- Bento grid with only the other three items -->
       <div class="bento-grid2 about-bento">
         <div class="bento1-item about-whatido">
@@ -183,15 +181,82 @@
         </div>
       </div>
     </section>
+    <section class="section certificates panel" id="certificates">
+      <div class="about-certificates">
+          <h2>Certificates</h2>
+          <div class="certificates-section">
+                        <div class="certificate-card">
+              <img src="https://cdn.simpleicons.org/freecodecamp" alt="Responsive Web Design" class="certificate-img">
+              <div class="certificate-info">
+                <div class="certificate-title">Responsive Web Design</div>
+                <div class="certificate-meta">
+                  <span class="certificate-org">freeCodeCamp</span> &bull; 
+                  <span class="certificate-date">Issued: May 2025</span>
+                </div>
+                <div class="certificate-desc">
+                  Developer certification in HTML, CSS, Flexbox, Grid & responsive design. Includes hands-on projects like landing pages & product websites using semantic code.
+                </div>
+                <a href="https://www.freecodecamp.org/certification/fcc-d99aa1e7-971f-4ebd-8cb3-b096d72e3328/responsive-web-design" target="_blank" class="certificate-view">View</a>
+              </div>
+            </div>
+
+            <div class="certificate-card">
+              <img src="/images/skill Intern Logo.png" alt="UI Design Specialization" class="certificate-img">
+              <div class="certificate-info">
+                <div class="certificate-title">UI Design Specialization</div>
+                <div class="certificate-meta">
+                  <span class="certificate-org">Skill Intern</span> &bull; 
+                  <span class="certificate-date">Issued: Feb 2025</span>
+                </div>
+                <div class="certificate-desc">
+                  Practical course covering UI/UX basics, wireframing, visual hierarchy, and Figma prototyping. Includes real-time design tasks and guided mentor feedback.
+                </div>
+                <a href="/images/SI Certificate.png" target="_blank" class="certificate-view">View</a>
+              </div>
+            </div>
+            
+            <div class="certificate-card">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAA7VBMVEVHcEz/RkL/R0D+SEr/RUD/RkOwjlb/SD7/SE3/SUj/Vzb/VDf9TFb8TVeHoFb/YTD/byn8TVn/jRr/fSL/mxL/SEj+yQn/ohH/tQv+VUb/vQn/wwn+zgj9wQm3xQ39zgT6zQYwhv/7zgowhv8uhv0ek+Avhv7yzAPjywIvhv0whv7PyQHUygIth/y3yAEnivSlxwGSxgUak94fj+h5xAlgwxMLqp8NnsQVlte6xwBNwh45wC0xwDMLt28IrJgJpa0kjPCaxQEpvzsevkkWvVANumQQu18JtXkIsIgTvVYOvGALuWtJwh4OvF8OvF9ccfxCAAAAT3RSTlMAUZvT7P8T//+wiv//kAv6/mD//+V2jv//JKf//0EmxOr/rP7+MEX//x10/6eu//3+/9v///7I//+K//+KS/3/YeX//7dsnv7/////5s3tMAqBMAAAAXFJREFUeAF0jUUCwCAMwDp3d/f9/4krnVt6goQCFzheECVJFHgOPpB5RZHYIKqqyU+vGwpCXkVM07pp2zEQ8hSYiCBf1rsuFrQCvaSahHe+9wMqWHJuOD2E/lYoWsRxkUbBxcdJshY6bEQ3L6fpWmTnXXbxkBcpJTb8UBZFgUX156uyLLHI4Y+YgqL+DZqS0R7n7o4NLQX9GQwbI5tugpKI7wF5Rjd/BiNCCQZfX5BfCwyWrsnagGEYiKKpMkLqgJmZmXn/caKTzGoM7+v4IEiWPQdJ4fMhFujHCzjH7Wny6xFwMB9UKBa4KN3Tl4kh9AZYVJRbpXhVVRGX0asEXNP1a7MM0wQJA+0WFcQtyz7bcFzPAwn+8AkPwmjDcZK6WJGR75zwsCirOo7rpu0SojC2oQUeIF72/TCMY4sUKSj2wX9iXgAHwYgEoKBPizOBgx4EhwnCtxOtDnYTzn1Gnw3wzYQT3zDJrpmXYVjmpj7d/gPknlJE6eZSewAAAABJRU5ErkJggg==" alt="Google UX Design" class="certificate-img">
+              <div class="certificate-info">
+                <div class="certificate-title">Google UX Design Professional Certificate</div>
+                <div class="certificate-meta">
+                  <span class="certificate-org">Coursera</span> &bull; 
+                  <span class="certificate-date">Issued: Sep 2024</span>
+                </div>
+                <div class="certificate-desc">
+                Covers the complete UX design process: user research, wireframing, prototyping, usability testing, and high-fidelity design using Figma and Adobe XD.  
+                </div>
+                <a href="https://www.coursera.org/account/accomplishments/professional-cert/T6DJ2WXFJ0IA" target="_blank" class="certificate-view">View</a>
+              </div>
+            </div>
+
+            <div class="certificate-card">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="JavaScript Algorithms" class="certificate-img">
+              <div class="certificate-info">
+                <div class="certificate-title">User Interface Design and Prototyping Specialization</div>
+                <div class="certificate-meta">
+                  <span class="certificate-org">Microsoft</span> &bull; 
+                  <span class="certificate-date">Issued: Oct 2024</span>
+                </div>
+                <div class="certificate-desc">
+                Focuses on UI design principles, accessibility, and interactive prototyping. Covers design systems, usability heuristics using Figma across platforms.  
+                </div>
+                <a href="https://www.coursera.org/account/accomplishments/verify/XLLAWIEQULNL" target="_blank" class="certificate-view">View</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </section>
     <!-- <section class="section projects" id="projects">Projects</section>
     <section class="section contact" id="contact">Contact</section> -->
   </div>
   <div class="scroll-hint" id="scrollHint">
     <span>Scroll horizontally to explore more &rarr;</span>
   </div>
-  <footer>
+  <!-- <footer>
     <p>&copy; 2023 Your Name</p>
-  </footer>
+  </footer> -->
   <script src="script.js"></script>
 </body>
 </html>

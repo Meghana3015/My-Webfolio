@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <div class="pwrapper">
+      <div>
+        <section id="psection1" class="psection pfixed">Section 1</section>
+      </div>
+      <section id="psection2" class="psection layer">Section 2</section>
+      <section id="psection3" class="psection layer">Section 3</section>
+      <section id="psection4" class="psection layer">Section 4</section>
+      <section id="psection5" class="psection layer">Section 5</section>
+      <section id="psection6" class="psection layer">Section 6</section>
+    </div>
+
+    <script>
+const section1Ref = document.getElementById("psection1");
+const layerRefs = document.querySelectorAll(".layer");
+
+const etalonTop = section1Ref.getBoundingClientRect().top;
+const etalonBottom = section1Ref.getBoundingClientRect().bottom;
+const etalonHeight = section1Ref.offsetHeight;
+const etalonDistance = etalonTop + etalonHeight;
+
+let currentIndex = 0;
+let currentRef = layerRefs[currentIndex];
+currentRef.style.marginTop = etalonHeight + "px";
+
+let currentPos = window.scrollY;
+
+function toggleStickyBehavior() {
+  let scrollPosition = window.scrollY;
+
+  let isScrollUp = currentPos > scrollPosition;
+
+  function getDownDistance() {
+    return (
+      etalonBottom * (currentIndex + 1) -
+      etalonTop * (currentIndex + 1) +
+      etalonTop
+    );
+  }
+
+  function getUpDistance() {
+    return (
+      etalonBottom * currentIndex + etalonTop * (currentIndex + 1) - etalonTop
+    );
+  }
+
+  if (!isScrollUp && scrollPosition >= getDownDistance()) {
+    currentRef.style.marginTop = 0;
+
+    if (!currentRef.classList.contains("pfixed") && currentIndex < 4) {
+      currentRef.classList.add("pfixed");
+
+      currentIndex += 1;
+      currentRef = layerRefs[currentIndex];
+    }
+    currentRef.style.marginTop = getDownDistance() + "px";
+  }
+
+  if (isScrollUp && getUpDistance() > scrollPosition && currentIndex > 0) {
+    currentRef.style.marginTop = 0;
+    currentIndex -= 1;
+    currentRef = layerRefs[currentIndex];
+    if (currentRef.classList.contains("pfixed")) {
+      currentRef.classList.remove("pfixed");
+    }
+
+    if (currentIndex < 1) {
+      currentRef.style.marginTop =
+        getUpDistance() + etalonBottom - etalonTop + "px";
+    } else {
+      currentRef.style.marginTop = getUpDistance() + etalonBottom + "px";
+    }
+  }
+
+  currentPos = window.scrollY;
+}
+
+window.addEventListener("scroll", toggleStickyBehavior);
+toggleStickyBehavior();
+    </script>
+  </body>
+</html>

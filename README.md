@@ -1,9 +1,9 @@
 # 💼 Meghana's Portfolio
 
-Welcome to my personal portfolio — a curated collection of my works in **UI/UX design**, **web design**, and **front-end development**. This site showcases selected projects, design explorations, and skills I've developed through real-time and academic experiences.
+Welcome to my personal portfolio — a curated collection of my works in **UI/UX design**, **Web design**, and **Front-end development**. This site showcases selected projects, design explorations, and skills I've developed through real-time and academic experiences.
 
 ## 🔗 Live Site
-[View Portfolio](https://your-username.github.io/your-repo-name) <!-- Replace with actual link -->
+[View Portfolio](https://meghana-timmampalli.netlify.app/)
 
 ---
 
@@ -23,13 +23,13 @@ Welcome to my personal portfolio — a curated collection of my works in **UI/UX
 ## 🛠️ Built With
 
 - HTML5, CSS3, JavaScript
-- Figma, Adobe XD, Canva
+- Figma
 - GitHub & Netlify
 - Visual Studio Code
 
 ---
 
-## 📁 Folder Structure
+<!-- ## 📁 Folder Structure
 
 ```bash
 .
@@ -39,4 +39,4 @@ Welcome to my personal portfolio — a curated collection of my works in **UI/UX
 │   └── css/
 ├── scripts/
 ├── README.md
-└── LICENSE
+└── LICENSE -->

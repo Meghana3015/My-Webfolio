@@ -88,7 +88,7 @@ body {
   height: 100vh;
   width: max-content;
   /* margin-left: 80px;  */
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -97,9 +97,9 @@ body {
 .section {
   flex: 0 0 100vw;
   height: 100vh;
-  padding: 3rem;
   color: white;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   scroll-snap-align: start;
