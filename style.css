@@ -109,8 +109,8 @@ body {
   padding-left: 80px;
 }
 .about    { background-color: var(--primary-color); }
-.projects { background-color: #334155; }
-.contact  { background-color: #475569; }
+.projects { background-color: var(--primary-color); }
+.contact  { background-color: var(--primary-color); }
 
 /* Link */
 a {
@@ -440,5 +440,31 @@ a {
   margin: 0px;
   padding: 2rem 0;
 } */
+}
+
+/* Tooltip Styles */
+.sidebar nav ul li a[data-title]:hover::after,
+.navbar nav ul li a[data-title]:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  color: #222;
+  padding: 6px 16px;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 12px;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.sidebar nav ul li a[data-title],
+.navbar nav ul li a[data-title] {
+  position: relative;
 }
 
