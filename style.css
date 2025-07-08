@@ -134,6 +134,7 @@ a {
   background: white;
   border-radius: 1rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 300px;
@@ -329,9 +330,9 @@ a {
 }
 
 .latest-work-btn {
-  background: var(--asset-color2);
+  background: #1c62a9;
   color: #fff;
-  padding: 0.6rem 1.3rem;
+  padding: 0.55rem 0.6rem;
   border-radius: 2rem;
   font-size: 1rem;
   font-weight: 600;

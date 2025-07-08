@@ -578,6 +578,40 @@ h2{
   text-decoration: underline;
 }
 
+/* Latest Work Section */
+.latest-work-header {
+  position: relative;
+}
+
+.latest-work-btn-icon {
+  /* position: absolute; */
+  right: 0;
+  bottom: 0;
+  width: 48px;
+  height: 48px;
+  background: #1c62a9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(16,46,118,0.13);
+  transition: background 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  /* z-index: 1; */
+}
+
+.latest-work-btn-icon .project-link-icon {
+  background: none;
+  box-shadow: none;
+  margin: 0;
+}
+
+.latest-work-btn-icon:hover,
+.latest-work-btn-icon:focus {
+  background: #003c71;
+  box-shadow: 0 4px 16px rgba(16,46,118,0.18);
+}
+
 /* Responsive */
 @media screen and (max-width: 700px) {
   .timeline-items {
