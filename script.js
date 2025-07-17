@@ -1,28 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Typed Role Animation
   const roles = [
     '<span class="dark">UI/UX</span> <span class="light">Designer</span>',
     '<span class="dark">Frontend</span> <span class="light">Developer</span>',
     '<span class="dark">Marketing</span> <span class="light">Designer</span>'
   ];
   const typedText = document.querySelector(".typed-text");
-  let roleIndex = 0;
-  let charIndex = 0;
-  let typing = true;
-  let currentRole = "";
+  let roleIndex = 0, charIndex = 0, typing = true, currentRole = "";
 
   function typeRole() {
     if (!typedText) return;
     currentRole = roles[roleIndex];
-    // Remove HTML tags for typing effect
     const tempDiv = document.createElement("div");
     tempDiv.innerHTML = currentRole;
     const plainText = tempDiv.textContent || tempDiv.innerText || "";
 
     if (typing) {
       if (charIndex < plainText.length) {
-        // Find the substring in HTML that matches the length of plainText
-        let htmlToShow = "";
-        let count = 0;
+        let htmlToShow = "", count = 0;
         for (let i = 0; i < currentRole.length; i++) {
           htmlToShow += currentRole[i];
           if (currentRole[i] !== "<") {
@@ -44,8 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } else {
       if (charIndex > 0) {
-        let htmlToShow = "";
-        let count = 0;
+        let htmlToShow = "", count = 0;
         for (let i = 0; i < currentRole.length; i++) {
           htmlToShow += currentRole[i];
           if (currentRole[i] !== "<") {
@@ -69,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Hide the scroll hint after 5 seconds or on first scroll
+  // Hide scroll hint after 5s or on first scroll/touch
   const scrollHint = document.getElementById('scrollHint');
   function hideScrollHint() {
     if (scrollHint) {
@@ -91,3 +85,27 @@ document.addEventListener('click', function (event) {
   window.print();
 }, false);
 
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData.entries());
+      console.log('Form submitted:', data);
+      alert('Thank you for your message!');
+      contactForm.reset();
+    });
+  }
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const scrollHint = document.getElementById('scrollHint');
+  if (scrollHint) {
+    scrollHint.addEventListener('click', function () {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+    });
+  }
+});

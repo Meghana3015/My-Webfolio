@@ -4,6 +4,7 @@
   --secondary-color: #ffedea;
   --asset-color: #085bc198;
   --asset-color2: #102e76;
+  --padding-color: #ffffff;
 }
 
 * {
@@ -196,6 +197,41 @@ a {
 }
 
 
+/* Profile Photo Styles */
+.profile-photo-circular-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circular-photo-wrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+.circular-photo-wrapper .bento-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  object-fit: cover;
+  border: 1px solid var(--asset-color2); 
+}
+.circular-text-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  color: var(--asset-color2);
+  background-color: var(--secondary-color);
+  border-radius: 200px;
+  border: 1px solid var(--asset-color2);
+}
+
+
+
 .intro-text {
   font-size: 2.15rem;
   font-weight: 400;
@@ -347,6 +383,19 @@ a {
   background: #0078d4;
 }
 
+/* Horizontal Scroll Progress Bar */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 0;
+  background: linear-gradient(90deg, #007bff 0%, #ff3955 100%);
+  border-radius: 0 0 8px 8px;
+  z-index: 9999;
+  transition: width 0.2s;
+}
+
 /* Media Query for Mobile */
 @media (max-width: 768px) {
   body {
@@ -468,4 +517,3 @@ a {
 .navbar nav ul li a[data-title] {
   position: relative;
 }
-

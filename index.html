@@ -6,19 +6,20 @@
   <title>Meghana Timmampalli</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="sections.css" />
-  <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+  <div id="scroll-progress-bar"></div>
   <div class="sidebar">
     <div class="logo">
       <img src="/images/MT.png" alt="Logo" />
     </div>
     <nav>
       <ul>
-        <li><a href="" data-title="Home"><i class="fas fa-home"></i></a></li>
+        <li><a href="#hero" data-title="Home"><i class="fas fa-home"></i></a></li>
         <li><a href="#about" data-title="About"><i class="fas fa-user"></i></a></li>
         <li><a href="#projects" data-title="Projects"><i class="fas fa-briefcase"></i></a></li>
+        <li><a href="#blogs" data-title="Blogs"><i class="fas fa-pen-nib"></i></a></li>
         <li><a href="#contact" data-title="Contact"><i class="fas fa-envelope"></i></a></li>
       </ul>
     </nav>
@@ -33,17 +34,33 @@
         <li><a href="#hero" title="Hero"><i class="fas fa-home"></i></a></li>
         <li><a href="#about" title="About"><i class="fas fa-user"></i></a></li>
         <li><a href="#projects" title="Projects"><i class="fas fa-briefcase"></i></a></li>
+        <li><a href="#blogs" title="Blogs"><i class="fas fa-pen-nib"></i></a></li>
         <li><a href="#contact" title="Contact"><i class="fas fa-envelope"></i></a></li>
       </ul>
     </nav>
   </div>
 
   <div class="scroll-container">
+    <!-- Hero Section -->
     <section class="section hero" id="hero">
       <div class="bento-grid">
-        <div class="bento-item">
-          <img src="/images/Meghana.jpg" alt="Profile Photo" class="bento-photo" />
-        </div>
+<!-- ...existing code... -->
+<div class="bento-item profile-photo-circular-text">
+  <div class="circular-photo-wrapper">
+    <svg viewBox="0 0 220 220" width="220" height="220" class="circular-text-svg">
+      <defs>
+        <path id="circlePath" d="M110,110 m-90,0 a90,90 0 1,1 180,0 a90,90 0 1,1 -180,0"/>
+      </defs>
+      <text fill="var(--asset-color2)" font-size="16" font-family="inherit" letter-spacing="2">
+        <textPath xlink:href="#circlePath" startOffset="0%">
+          Curious mind •~• Creative heart •~• Detail-oriented hands •~•
+        </textPath>
+      </text>
+    </svg>
+    <img src="/images/Meghana.jpg" alt="Profile Photo" class="bento-photo" />
+  </div>
+</div>
+<!-- ...existing code... -->
         <div class="bento-item" style="width: 748px;">
           <div class="intro-text">
             <span class="light">Hello!</span><br>
@@ -68,29 +85,29 @@
             </a>
           </div>
         </div>
-
         <div class="bento-item bento-latest-work">
           <div class="latest-work-header">
             <h3>
               <span class="latest-gray">See my <br> Latest </span><span class="latest-black">work</span>
             </h3>
             <a href="#projects" class="latest-work-btn">
-              <span class="bold-arrow"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
+              <span class="bold-arrow">
+                <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
                   <circle cx="11" cy="11" r="10" fill="#fff" stroke="#085bc1" stroke-width="2"/>
                   <polyline points="8,14 14,8" fill="none" stroke="#085bc1" stroke-width="2" stroke-linecap="round"/>
                   <polyline points="10,8 14,8 14,12" fill="none" stroke="#085bc1" stroke-width="2" stroke-linecap="round"/>
                 </svg>
-              </span></a>
+              </span>
+            </a>
           </div>
         </div>
-        
-        <!-- <div class="bento-item">Item 5</div> -->
-
       </div>
     </section>
+
+    <!-- About Section -->
     <section class="section about panel" id="about">
       <div class="about-heading">About Me</div>
-      <!-- Education OUTSIDE the bento grid -->
+      <div class="sub-heading">Design. Code. Iterate. Repeat.</div>
       <div class="about-education">
         <div class="timelines">
           <section class="timeline education">
@@ -99,21 +116,21 @@
               <li class="timeline-item">
                 <h3>Bachelor of Technology in Computer Science & Engineering</h3>
                 <p class="date-interval">
-                  <time datetime="2017-09">2022</time> &ndash; <time datetime="2019-07">2026</time>
+                  <time datetime="2022">2022</time> &ndash; <time datetime="2026">2026</time>
                 </p>
                 <p class="location">Madanapalle Institute of Technology & Science, Madanapalle, A.P., India</p>
               </li>
               <li class="timeline-item">
                 <h3>Intermediate (MPC)</h3>
                 <p class="date-interval">
-                  <time datetime="2011-09">2020</time> &ndash; <time datetime="2017-07">2022</time>
+                  <time datetime="2020">2020</time> &ndash; <time datetime="2022">2022</time>
                 </p>
                 <p class="location">Krishna Reddy Siddhartha Jr. College, Madanapalle, A.P., India</p>
               </li>
               <li class="timeline-item">
                 <h3>Matriculation</h3>
                 <p class="date-interval">
-                  <time datetime="2010-06">2020</time>
+                  <time datetime="2020">2020</time>
                 </p>
                 <p class="location">Sri Chaitanya Children's Academy, Madanapalle, A.P., India</p>
               </li>
@@ -121,7 +138,6 @@
           </section>
         </div>
       </div>
-      <!-- Bento grid with only the other three items -->
       <div class="bento-grid2 about-bento">
         <div class="bento1-item about-whatido">
           <h2 class="timeline-title">What I Do</h2>
@@ -141,20 +157,14 @@
             <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" alt="Adobe XD" class="skill-icon"> Adobe XD</li>
             <li><img src="https://cdn.simpleicons.org/canva" alt="Canva" class="skill-icon"> Canva</li>
             <li><img src="https://cdn.simpleicons.org/miro" alt="Miro" class="skill-icon"> Miro</li>
-            <!-- <li><i class="fab fa-html5 skill-icon" style="color:#e44d26"></i> HTML5</li> -->
-            <li><img src="https://cdn.simpleicons.org/html5" alt="Canva" class="skill-icon"> HTML5</li>
-            <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="Canva" class="skill-icon"> CSS3</li>
-            <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Canva" class="skill-icon"> JavaScript</li>
-            <!-- <li><i class="fab fa-css3-alt skill-icon" style="color:#1572b6"></i> CSS3</li>
-            <li><i class="fab fa-js-square skill-icon" style="color:#f7df1e"></i> JavaScript</li> -->
-            <li><img src="https://cdn.simpleicons.org/bootstrap" alt="Canva" class="skill-icon"> Bootstrap</li>
-            <!-- <li><i class="fab fa-bootstrap skill-icon" style="color:#563d7c"></i> Bootstrap</li>  -->
-            <li><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" class="skill-icon"> Tailwind CSS</li>
-            <li><img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="Canva" class="skill-icon"> VS Code</li>
-            <!-- <li><i class="fas fa-code skill-icon" style="color:#0078d4"></i> VS Code</li> -->
-            <!-- <li><i class="fab fa-github skill-icon" style="color:#333"></i> GitHub</li> -->
-             <li><img src="https://cdn.simpleicons.org/github" alt="Canva" class="skill-icon"> GitHub</li>
+            <li><img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS Code" class="skill-icon"> VS Code</li>
+            <li><img src="https://cdn.simpleicons.org/github" alt="GitHub" class="skill-icon"> GitHub</li>
             <li><img src="https://cdn.simpleicons.org/netlify" alt="Netlify" class="skill-icon"> Netlify</li>
+            <li><img src="https://cdn.simpleicons.org/notion" alt="Notion" class="skill-icon"> Notion</li>
+            <li><img src="https://cdn.simpleicons.org/html5" alt="HTML5" class="skill-icon"> HTML5</li>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3" class="skill-icon"> CSS3</li>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" class="skill-icon"> JavaScript</li>
+            <li><img src="https://cdn.simpleicons.org/bootstrap" alt="Bootstrap" class="skill-icon"> Bootstrap</li>
           </ul>
         </div>
         <div class="bento1-item about-process">
@@ -199,11 +209,13 @@
         </div>
       </div>
     </section>
+
+    <!-- Certificates Section -->
     <section class="section certificates panel" id="certificates">
       <div class="about-certificates">
-          <h2>Certificates</h2>
-          <div class="certificates-section">
-                        <div class="certificate-card">
+        <h2>Certificates</h2>
+        <div class="certificates-section">
+            <div class="certificate-card">
               <img src="https://cdn.simpleicons.org/freecodecamp" alt="Responsive Web Design" class="certificate-img">
               <div class="certificate-info">
                 <div class="certificate-title">Responsive Web Design</div>
@@ -266,9 +278,13 @@
           </div>
         </div>
     </section>
+
+    <!-- Projects Section -->
     <section class="section projects" id="projects">
       <div class="about-heading">Projects</div>
+      <div class="sub-heading">Real work. Real impact.</div>
       <div class="projects-container">
+        <!-- <div class="sub-heading1">The right mix of creativity, logic, and collaboration</div> -->
         <div class="project-card">
           <img src="/images/MITS Foundation.png" alt="Project Preview" class="project-img" />
           <div class="project-content">
@@ -389,55 +405,123 @@
             </div>
           </div>
         </div>
-        <!-- <div class="project-card">
-          <img src="/images/Ashv.png" alt="Project Preview" class="project-img" />
-          <div class="project-content">
-            <h3 class="project-title">ASHV 2k25 Website</h3>
-              <div class="project-tags">
-                <span>UI/UX Designer</span>
-                <span>Frontend Developer</span>
-              </div>
-              <div class="project-tags">
-                <span>Figma</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-              <p class="project-desc">
-                A dynamic event website built for a technical fest, with real-time registration and admin access system.
-              </p>
-            <div class="project-links">
-              <div class="project-link">
-                <a href="https://ashv2k25.mits.ac.in" target="_blank">
-                  View Project
-                  <span class="project-link-icon">
-                    <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
-                      <circle cx="11" cy="11" r="10" fill="#fff" stroke="#085bc1" stroke-width="2"/>
-                      <polyline points="8,14 14,8" fill="none" stroke="#085bc1" stroke-width="2" stroke-linecap="round"/>
-                      <polyline points="10,8 14,8 14,12" fill="none" stroke="#085bc1" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                  </span>
-                </a>
-              </div>
-              <div class="sub-link">
-                <a href="https://ashv2k25.mits.ac.in" target="_blank">Live Site <span class="bold-arrow">↗</span></a>
-                <br>
-                <a href="https://behance.net/ashv-case-study" target="_blank">Case Study <span class="bold-arrow">↗</span></a>
-              </div>
-            </div>
-          </div>
-        </div> -->
 
       </div>
     </section>
-    <!-- <section class="section contact" id="contact">Contact</section> -->
+
+    <!-- Highlights Section -->
+    <!-- <section class="section highlights" id="highlights">
+  <div class="about-heading">Highlights</div>
+  <div class="sub-heading">Moments that made my journey meaningful</div>
+  <div class="highlights-container">
+    <div class="highlights-bento">
+      <div class="bento-img bento-img1" style="--image-name:'Event Poster Design';">
+        <img src="https://i.imgur.com/x3nxu2W.png" alt="Event Poster Design" />
+      </div>
+      <div class="bento-img bento-img2" style="--image-name:'Social Media Campaign';">
+        <img src="https://i.imgur.com/d5LcHlk.png" alt="Social Media Campaign" />
+      </div>
+      <div class="bento-img bento-img3" style="--image-name:'Branding Project';">
+        <img src="https://i.imgur.com/5IxsfqN.png" alt="Branding Project" />
+      </div>
+      <div class="bento-img bento-img4" style="--image-name:'UI/UX Case Study';">
+        <img src="https://i.imgur.com/67qVVB7.png" alt="UI/UX Case Study" />
+      </div>
+      <div class="bento-img bento-img5" style="--image-name:'Logo Design';">
+        <img src="https://i.imgur.com/suCBV3K.png" alt="Logo Design" />
+      </div>
+      <div class="bento-img bento-img6" style="--image-name:'Poster';">
+        <img src="https://i.imgur.com/5IxsfqN.png" alt="Poster" />
+      </div>
+      <div class="bento-img bento-img7" style="--image-name:'Campaign';">
+        <img src="https://i.imgur.com/d5LcHlk.png" alt="Campaign" />
+      </div>
+    </div>
+  </div>
+    </section> -->
+
+  <!-- <section class="section blogs" id="blogs">
+  <div class="about-heading">Blogs</div>
+  <div class="sub-heading">Sharing insights and experiences</div>
+  <div class="blogs-container">
+    <div class="blog-card">
+      <h3 class="blog-title">The Art of UI Design</h3>
+      <p class="blog-excerpt">Exploring the principles of user interface design and how they enhance user experience.</p>
+      <a href="https://medium.com/@meghanatimmapalli/the-art-of-ui-design-1234567890" target="_blank" class="blog-link">Read More</a>
+    </div>
+    <div class="blog-card">
+      <h3 class="blog-title">Responsive Web Design Best Practices</h3>
+      <p class="blog-excerpt">A guide to creating responsive websites that provide optimal viewing experiences across devices.</p>
+      <a href="https://medium.com/@meghanatimmapalli/responsive-web-design-best-practices-1234567890" target="_blank" class="blog-link">Read More</a>
+    </div>
+    <div class="blog-card">
+      <h3 class="blog-title">Understanding User Experience</h3>
+      <p class="blog-excerpt">Insights into user experience design and its impact on product success.</p>
+      <a href="https://medium.com/@meghanatimmapalli/understanding-user-experience-1234567890" target="_blank" class="blog-link">Read More</a>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="blogs.html" class="project-link" style="background: #1c62a9; color: #fff; padding: 0.7em 2em; border-radius: 2em; font-weight: 600; font-size: 1.1rem; text-decoration: none; box-shadow: 0 2px 8px rgba(16,46,118,0.07);">
+          View All Blogs
+        </a>
+    </div>
+  </section> -->
+
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+  <div class="about-heading">Contact Me</div>
+        <div class="sub-heading">Let’s build something great together.</div>
+  <div class="contact-container">
+    <div class="form-section">
+      <h2>Get in Touch</h2>
+      <p>Ideas, collaborations, or a simple hello — I’m just a click away.</p>
+    </div>
+    <div class="form-wrapper">
+      <form class="contact-form" autocomplete="off">
+      <div class="form-row">
+        <div class="inputform">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" required placeholder="Your Name" />
+        </div>
+        <div class="inputform">   
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" required placeholder="you@email.com" />
+        </div>
+      </div>
+
+      <div class="form-row1">
+        <label for="contact-mobile">Mobile Number</label>
+          <input type="tel" id="contact-mobile" name="mobile" pattern="[0-9]{10,15}" required placeholder="Mobile Number" />
+
+      </div>
+      <button type="submit" class="contact-submit">
+        Send Message
+      </button>
+    </form>
+    </div>
+  </div>
+  <div class="social-links">
+    <div class="social-links1">
+      <a href="https://wa.me/8639156722" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="social-links1">
+      <a href="mailto:meghanatimmapalli30@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="social-links1">
+      <a href="https://www.linkedin.com/in/meghana-timmampalli/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="social-links1">
+      <a href="https://www.behance.net/meghanatimmamp" target="_blank" title="Behance"><i class="fab fa-behance"></i></a>
+    </div>
+    <div class="social-links1">
+      <a href="https://www.github.com/Meghana3015" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</section>
   </div>
   <div class="scroll-hint" id="scrollHint">
     <span>Scroll horizontally to explore more <span class="bold-arrow">↗</span></span>
   </div>
-  <!-- <footer>
-    <p>&copy; 2023 Your Name</p>
-  </footer> -->
   <script src="script.js"></script>
 </body>
 </html>
