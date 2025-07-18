@@ -7,12 +7,18 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="sections.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preload" as="image" href="/images/Meghana.jpg" />
+  <link rel="preload" as="image" href="/images/MT.png" />
+  <!-- Add more as needed for above-the-fold images -->
 </head>
 <body>
+  <div id="loading-overlay" style="position:fixed;z-index:99999;inset:0;background:#fff;display:flex;align-items:center;justify-content:center;">
+    <span style="color:#102e76;font-size:2rem;font-weight:700;">Loading...</span>
+  </div>
   <div id="scroll-progress-bar"></div>
   <div class="sidebar">
     <div class="logo">
-      <img src="/images/MT.png" alt="Logo" />
+      <img src="/images/MT.png" alt="Logo" loading="lazy" />
     </div>
     <nav>
       <ul>
@@ -27,7 +33,7 @@
 
   <div class="navbar">
     <div class="logo">
-      <img src="/images/MT.png" alt="Logo" />
+      <img src="/images/MT.png" alt="Logo" loading="lazy" />
     </div>
     <nav>
       <ul>
@@ -57,7 +63,7 @@
         </textPath>
       </text>
     </svg>
-    <img src="/images/Meghana.jpg" alt="Profile Photo" class="bento-photo" />
+    <img src="/images/Meghana.jpg" alt="Profile Photo" class="bento-photo" loading="lazy" />
   </div>
 </div>
 <!-- ...existing code... -->
@@ -410,61 +416,100 @@
     </section>
 
     <!-- Highlights Section -->
-    <!-- <section class="section highlights" id="highlights">
+    <section class="section highlights" id="highlights">
   <div class="about-heading">Highlights</div>
   <div class="sub-heading">Moments that made my journey meaningful</div>
   <div class="highlights-container">
     <div class="highlights-bento">
       <div class="bento-img bento-img1" style="--image-name:'Event Poster Design';">
-        <img src="https://i.imgur.com/x3nxu2W.png" alt="Event Poster Design" />
+        <img src="/images/Img3.jpg" alt="Event Poster Design" />
       </div>
       <div class="bento-img bento-img2" style="--image-name:'Social Media Campaign';">
-        <img src="https://i.imgur.com/d5LcHlk.png" alt="Social Media Campaign" />
+        <img src="images/Img4.jpg" alt="Social Media Campaign" />
       </div>
       <div class="bento-img bento-img3" style="--image-name:'Branding Project';">
-        <img src="https://i.imgur.com/5IxsfqN.png" alt="Branding Project" />
+        <img src="images/Img2.jpg" alt="Branding Project" />
       </div>
       <div class="bento-img bento-img4" style="--image-name:'UI/UX Case Study';">
-        <img src="https://i.imgur.com/67qVVB7.png" alt="UI/UX Case Study" />
+        <img src="images/Img6.jpeg" alt="UI/UX Case Study" />
       </div>
-      <div class="bento-img bento-img5" style="--image-name:'Logo Design';">
-        <img src="https://i.imgur.com/suCBV3K.png" alt="Logo Design" />
+      <div class="bento-image bento-img5" style="--image-name:'Logo Design';">
+        <div class="bento-img bento-img1" style="--image-name:'Logo Design';">
+          <img src="images/Img1.jpg" alt="Logo Design" />
+        </div>
+        <div class="bento-img bento-img2" style="--image-name:'Logo Design';">
+          <img src="images/Img8.png" alt="Logo Design" />
+        </div>
       </div>
       <div class="bento-img bento-img6" style="--image-name:'Poster';">
-        <img src="https://i.imgur.com/5IxsfqN.png" alt="Poster" />
+        <img src="images/Img5.jpg" alt="Poster" />
       </div>
       <div class="bento-img bento-img7" style="--image-name:'Campaign';">
-        <img src="https://i.imgur.com/d5LcHlk.png" alt="Campaign" />
+        <img src="images/Img7.png" alt="Campaign" />
       </div>
     </div>
   </div>
-    </section> -->
+    </section>
 
-  <!-- <section class="section blogs" id="blogs">
-  <div class="about-heading">Blogs</div>
-  <div class="sub-heading">Sharing insights and experiences</div>
-  <div class="blogs-container">
-    <div class="blog-card">
-      <h3 class="blog-title">The Art of UI Design</h3>
-      <p class="blog-excerpt">Exploring the principles of user interface design and how they enhance user experience.</p>
-      <a href="https://medium.com/@meghanatimmapalli/the-art-of-ui-design-1234567890" target="_blank" class="blog-link">Read More</a>
-    </div>
-    <div class="blog-card">
-      <h3 class="blog-title">Responsive Web Design Best Practices</h3>
-      <p class="blog-excerpt">A guide to creating responsive websites that provide optimal viewing experiences across devices.</p>
-      <a href="https://medium.com/@meghanatimmapalli/responsive-web-design-best-practices-1234567890" target="_blank" class="blog-link">Read More</a>
-    </div>
-    <div class="blog-card">
-      <h3 class="blog-title">Understanding User Experience</h3>
-      <p class="blog-excerpt">Insights into user experience design and its impact on product success.</p>
-      <a href="https://medium.com/@meghanatimmapalli/understanding-user-experience-1234567890" target="_blank" class="blog-link">Read More</a>
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-        <a href="blogs.html" class="project-link" style="background: #1c62a9; color: #fff; padding: 0.7em 2em; border-radius: 2em; font-weight: 600; font-size: 1.1rem; text-decoration: none; box-shadow: 0 2px 8px rgba(16,46,118,0.07);">
+  <section class="section blogs" id="blogs">
+    <div class="about-heading">Blogs</div>
+    <div class="sub-heading">Sharing insights and experiences</div>
+    <div class="blogs-container">
+      <div class="card">
+        <div class="card-banner">
+          <img class="banner-img" src='/images/Blog1.png' alt=''>
+        </div>
+        <div class="card-body">
+          <a class="blog-title" href="blogs.html" target="_blank">Designing for Developers: My Take as a Developer-Designer</a>
+          <p class="blog-description">Bridging the gap between design and development through real-world collaboration.</p>
+          <div class="blog-meta" style="color:#888; font-size:0.95em;">
+            <span>June 15, 2025</span> &bull; <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-banner">
+          <img class="banner-img" src='images/Blog2.png' alt=''>
+        </div>
+        <div class="card-body">
+          <a class="blog-title" href="blogs.html" target="_blank">What I Learned from Designing Real Projects</a>
+          <p class="blog-description">Insights from working on live college and client projects that shaped my UI/UX journey.</p>
+          <div class="blog-meta" style="color:#888; font-size:0.95em;">
+            <span>July 10, 2025</span> &bull; <span>4 min read</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-banner">
+          <img class="banner-img" src='images/Blog3.png' alt=''>
+        </div>
+        <div class="card-body">
+          <a class="blog-title" href="blogs.html" target="_blank">My Favorite Free Tools for UI/UX Design (as a Student Designer)</a>
+          <p class="blog-description">The essential tools every beginner designer should explore — all free and beginner-friendly.</p>
+          <div class="blog-meta" style="color:#888; font-size:0.95em;">
+            <span>June 28, 2025</span> &bull; <span>3 min read</span>
+          </div>
+        </div>
+      </div>
+      <!-- <div style="text-align: center; margin-top: 0rem;">
+        <a href="blogs.html" class="certificate-view">
           View All Blogs
         </a>
+      </div> -->
+              <div class="project-link">
+                <a href="blogs.html" target="_blank">
+                  View All Blogs
+                  <span class="project-link-icon">
+                    <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
+                      <circle cx="11" cy="11" r="10" fill="#fff" stroke="#085bc1" stroke-width="2"/>
+                      <polyline points="8,14 14,8" fill="none" stroke="#085bc1" stroke-width="2" stroke-linecap="round"/>
+                      <polyline points="10,8 14,8 14,12" fill="none" stroke="#085bc1" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                </a>
+              </div>
     </div>
-  </section> -->
+  </section>
 
 
     <!-- Contact Section -->
@@ -490,8 +535,8 @@
       </div>
 
       <div class="form-row1">
-        <label for="contact-mobile">Mobile Number</label>
-          <input type="tel" id="contact-mobile" name="mobile" pattern="[0-9]{10,15}" required placeholder="Mobile Number" />
+        <label for="contact-mobile">Message</label>
+          <input type="textarea" id="contact-message" name="message" required placeholder="Message" />
 
       </div>
       <button type="submit" class="contact-submit">
@@ -523,5 +568,11 @@
     <span>Scroll horizontally to explore more <span class="bold-arrow">↗</span></span>
   </div>
   <script src="script.js"></script>
+  <script>
+  // Wait for all images to load before hiding overlay
+  window.addEventListener('load', function() {
+    document.getElementById('loading-overlay').style.display = 'none';
+  });
+</script>
 </body>
 </html>
