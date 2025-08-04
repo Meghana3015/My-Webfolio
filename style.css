@@ -289,7 +289,7 @@ a {
   width: 48px;
   height: 47px;
   object-fit: contain;
-  border-radius: 30px;
+  border-radius: 14px;
   /* background: #fff; */
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
@@ -1546,6 +1546,7 @@ h2{
     width: 40px;
     height: 40px;
     border-radius: 10px;
+    border: 2px solid #003c71;
     background: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   }
