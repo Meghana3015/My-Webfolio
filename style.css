@@ -19,6 +19,8 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   background: var(--primary-color);
+  height: 100vh;
+  width: 100vw;
 }
 
 /* Desktop Sidebar */
@@ -109,6 +111,7 @@ body {
 
 .hero     { background-color: var(--primary-color); 
   padding-left: 80px;
+  min-width: 1500px;
 }
 .about    { background-color: var(--primary-color); }
 .projects { background-color: var(--primary-color); }
@@ -139,7 +142,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 300px;
+  max-height: 270px;
   font-size: 1.2rem;
   font-weight: 500;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -155,7 +158,8 @@ a {
 .bento-item:nth-child(2) {
   grid-column: 2 / 4;
   grid-row: 1 / 2;
-  min-height: 270px;
+  height: 270px;
+  max-width: 748px;
   background-color: var(--secondary-color);
 } 
 .bento-item:nth-child(3) {
@@ -382,7 +386,14 @@ a {
   background: #0078d4;
 }
 
+.download-btn{
+  width: 100%; display: flex; justify-content: flex-end;
+}
 
+.intro{
+  width: 200px;
+  width: 748px;
+}
 
 /* About Section Layout */
 
@@ -733,7 +744,7 @@ h2{
 .certificates-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem 1.2rem;
+  gap: 0.8rem 1.2rem;
   margin:auto;
   overflow-y: auto;
 }
@@ -742,13 +753,13 @@ h2{
   background: #ffffff;
   border-radius: 0.8rem;
   box-shadow: 0 1px 4px rgba(16,46,118,0.07);
-  padding: 1.3rem 1.5rem 1.2rem 1.5rem;
+  padding: 1.1rem 1.5rem 1.2rem 1.5rem;
   display: flex;
   gap: 1rem;
   align-items: flex-start;
   justify-content: center;
   min-width: 0;
-  min-height: 200px;
+  min-height: 199px;
 }
 
 .certificate-img {
@@ -806,11 +817,29 @@ h2{
   background: #102e76;
 }
 
+.all-link a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.8rem;
+  color: var(--asset-color2);
+}
+
+.all-link a:hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.8rem;
+  font-size: 1.05rem;
+  color: var(--asset-color2);
+}
+
 .projects{
   display: flex;
   flex-direction: row;
   /* background-color: var(--primary-color); */
-  min-width: 1000px;
+  min-width: 1500px;
+  max-width: 2200px;
   /* min-height: 564px; */
   align-items: center;
   justify-content: center;
@@ -1508,7 +1537,7 @@ h2{
     top: 0;
     left: 0;
     width: 100vw;
-    height: 92px;
+    height: 88px;
     background: var(--primary-color);
     color: var(--asset-color);
     z-index: 1001;
@@ -1571,9 +1600,9 @@ h2{
     scroll-snap-align: start;
   }
 
-  .hero .bento-grid {
+  /* .hero .bento-grid {
     display: none !important;
-  }
+  } */
 /* .bento-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1611,3 +1640,578 @@ h2{
 .navbar nav ul li a[data-title] {
   position: relative;
 }
+
+
+
+
+
+@media (max-width: 768px) {
+  /* Layout: vertical scroll */
+  .scroll-container {
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: none;
+  }
+
+  .section {
+    flex: 1 0 auto;
+    height: auto;
+    min-height: 100vh;
+    min-width: 300px;
+    padding: 1.5rem 0rem;
+    scroll-snap-align: unset;
+  }
+
+  /* Hide sidebar, show navbar */
+  .sidebar {
+    display: none;
+  }
+
+  /* .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: var(--asset-color2);
+    color: white;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+  } */
+
+/* .navbar nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar nav ul li {
+    margin: 0;
+  } */
+
+  /* Bento Grid: single column */
+  .bento-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    margin-top: 16px;
+    padding: 4rem 1rem 2rem 1rem;
+  }
+
+  .bento-item {
+    width: 100%;
+    min-height: auto;
+    padding: 1.2rem;
+    /* font-size: 1rem; */
+  }
+
+  .bento-item:nth-child(1),
+  .bento-item:nth-child(2),
+  .bento-item:nth-child(3),
+  .bento-item:nth-child(4) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .bento-item:nth-child(3){
+    padding: 24px 26px;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  .bento-item:nth-child(2){
+    min-width: 316px;
+    max-height: 220px;
+    margin: 0 auto;
+  }
+
+  .download-btn{
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  /* Intro text styling */
+  .intro-text {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .intro-text .light,
+  .intro-text .dark {
+    display: inline-block;
+    margin: 0 0.15rem;
+  }
+
+  /* Typed text */
+  .typed-text {
+    font-size: 1.5arem;
+  }
+
+  .typed-cursor {
+    font-size: 1.2rem;
+  }
+
+  /* Profile circular photo + text */
+  .circular-photo-wrapper {
+    width: 180px;
+    height: 180px;
+    margin: auto;
+  }
+
+  .circular-photo-wrapper .bento-photo {
+    width: 132px;
+    height: 132px;
+    top: 24px;
+    left: 24px;
+  }
+
+  .circular-text-svg {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Resume link button */
+  #resume {
+    font-size: 1rem;
+    padding: 0.6rem 0.1rem 0.6rem 1rem;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .project-link-icon {
+    margin-left: 0.5rem;
+  }
+
+  /* Latest work section */
+  .bento-latest-work {
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+    max-height: 170px;
+  }
+
+  .latest-work-header {
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 8px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .latest-work-header h3 {
+    font-size: 1.6rem;
+    padding: 0;
+  }
+
+  .latest-work-btn {
+    margin: 0;
+    font-size: 1rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  /* Circular text font resize */
+  .circular-text-svg text {
+    font-size: 18.5px;
+    letter-spacing: 1px;
+  }
+
+  /* Scroll hint (if used) */
+  .scroll-hint {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  /* Logo */
+  .logo {
+    margin: 1rem auto;
+  }
+
+  .logo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo span {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* about section*/
+@media (max-width: 1024px) {
+  .about {
+    flex-direction: column;
+    padding: 0rem 1rem;
+  }
+
+  .about-heading {
+    writing-mode: horizontal-tb;
+    transform: rotate(0);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .sub-heading{
+    writing-mode: horizontal-tb;
+    transform: rotate(0);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  h2{
+    margin: 1.4rem 0 0 0;
+  }
+  .about-education {
+    width: 100%;
+    min-width: unset;
+    margin: 0 auto 1rem auto;
+    height: auto;
+    padding: 0.6rem 1rem;
+  }
+
+  .about-whatido{
+    margin: 0rem 0;
+  }
+
+  .about-bento {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: unset;
+    width: 100%;
+    padding: 0rem;
+  }
+
+  .about-bento .bento1-item {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem 2rem;
+  }
+
+  .about-whatido,
+  .about-skills,
+  .about-process {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .about-skills{
+    grid-column: 2 / span 2;
+    grid-row: 1 / 3;
+    background-color: var(--secondary-color);
+    padding: 10px 40px;
+  }
+  .whatido-list {
+    grid-template-columns: 1fr;
+    min-width: 100%;
+  }
+
+  .skills-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skills-list li {
+    font-size: 1rem;
+    width: 120px;
+  }
+
+  .about-process{
+    align-items: center;
+    max-height: 500px;
+  }
+  .process {
+    flex-direction: column;
+    gap: 0rem;
+    height: auto;
+    margin: auto 0;
+    margin-top: 16px;
+    align-items: center;
+  }
+  .mobile-process{
+    height: 380px  !important;
+  }
+  .process__item {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    max-width: 100%;
+    padding: 0rem;
+    width: 100%;
+  }
+
+  .process__subtitle {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .timeline-title {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .timeline-items {
+    padding-left: 1.5rem;
+    margin: 14px;
+  }
+
+  .timeline-item h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-item .date-interval,
+  .timeline-item .location {
+    font-size: 0.85rem;
+  }
+
+  .skill-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5em;
+  }
+
+  .about-process .process__title {
+    font-size: 1rem;
+  }
+
+  .about-process .process__number {
+    font-size: 1.8rem;
+  }
+
+  .about-process .process__subtitle{
+    display: none !important;
+  }
+
+  .bento1-item h2 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+
+  .whatido-list li {
+    padding-left: 1.5em;
+    font-size: 1rem;
+  }
+
+  .whatido-service {
+    font-size: 1rem;
+  }
+
+  .process__subtitle {
+    font-size: 0.85rem;
+  }
+
+  .timeline-items {
+    padding-left: 1.8rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 1.8em;
+  }
+
+  .date-interval{
+    margin: 6px 0 0 0;
+  }
+  .timeline-item h3 {
+    font-size: 0.95rem;
+  }
+
+  .timeline-item .location,
+  .timeline-item .date-interval {
+    font-size: 0.75rem;
+  }
+
+  .about-heading {
+    font-size: 1.75rem;
+    margin-bottom: 0.2rem;
+  }
+}
+
+
+/* certifiactes */
+
+@media (max-width: 768px) {
+  .certificates {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    min-height: max-content;
+    box-sizing: border-box;
+  }
+
+  .about-certificates {
+    min-height: max-content;
+    min-width: unset;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .certificates-section {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+    width: 100%;
+    overflow-y: unset;
+    box-sizing: border-box;
+  }
+
+  .certificate-card {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 0.5em;
+    min-height: auto;
+  }
+
+  .certificate-img {
+    width: 100%;
+    max-width: 60px;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .certificate-info {
+    align-items: flex-start;
+    gap: 0.5em;
+    width: 100%;
+  }
+
+  .certificate-title {
+    font-size: 1rem;
+    height: auto;
+  }
+
+  .certificate-meta,
+  .certificate-desc {
+    height: auto;
+    font-size: 0.85em;
+  }
+
+  .certificate-view {
+    font-size: 0.9em;
+    padding: 0.4em 0.8em;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-width: unset;
+    min-height: max-content;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 1rem;
+    margin: 1rem 0;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .project-img {
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+  }
+
+  .project-desc {
+    height: auto;
+    font-size: 0.9rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    height: auto;
+    margin-top: 12px;
+  }
+
+  .project-link {
+    font-size: 0.9rem;
+    padding: 0.4em 1em;
+  }
+
+  .project-link-icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .sub-link{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem
+  }
+
+  .sub-heading {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 14px;
+    text-align: center;
+    margin: 0.6rem 0 1rem 0;
+    display: block;
+  }
+  .highlights {
+    display: none !important;
+  }
+}
+
+
+
+
+
