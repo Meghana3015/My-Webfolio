@@ -287,9 +287,9 @@ a {
 }
 .logo img {
   width: 48px;
-  height: 48px;
+  height: 47px;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 30px;
   /* background: #fff; */
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
@@ -1509,15 +1509,6 @@ h2{
     grid-row: auto;
   }
 }
-
-
-
-
-
-
-
-
-
 
 /* Media Query for Mobile */
 @media (max-width: 768px) {
